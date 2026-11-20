@@ -26,5 +26,5 @@ The workflow (`.github/workflows/run-pytest.yml`) runs pytest on GitHub:
 - on pushes to `main`
 - manually, using the **Run workflow** button in the Actions tab
 
-It only runs when files in `src/`, `tests/` or the workflow file change.
+Automatic runs only start when files in `src/`, `tests/` or the workflow file change.
 If a newer run starts on the same branch, the older run is cancelled.
