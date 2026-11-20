@@ -20,5 +20,11 @@ Run the tests from this folder:
 
 ## GitHub Actions
 
-The workflow runs pytest automatically when code in `src/`, `tests/` or the workflow file is pushed.
-Changes to other files, such as this README, do not start a test run.
+The workflow (`.github/workflows/run-pytest.yml`) runs pytest on GitHub:
+
+- on pull requests into `main`, once they are ready for review (draft pull requests are skipped)
+- on pushes to `main`
+- manually, using the **Run workflow** button in the Actions tab
+
+It only runs when files in `src/`, `tests/` or the workflow file change.
+If a newer run starts on the same branch, the older run is cancelled.
