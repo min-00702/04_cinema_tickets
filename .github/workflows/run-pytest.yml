@@ -21,6 +21,13 @@ on:
       - "src/**"
       - "tests/**"
       - ".github/workflows/run-pytest.yml"
+  workflow_dispatch:
+
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 
 jobs:
   test:
