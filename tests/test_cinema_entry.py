@@ -1,3 +1,5 @@
+# Unit tests for can_watch() in src/cinema_entry.py
+
 import pytest
 
 from src.cinema_entry import can_watch
